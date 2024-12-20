@@ -4,7 +4,7 @@ import json
 URL="https://quotes.toscrape.com/"
 response=requests.get(URL)
 if response.status_code !=200:
-    print("Ошибка при данном запросе {response.status_code} ")
+    print("Ошибка при запросе {response.status_code} ")
     exit()
 soup = BeautifulSoup(response.content, "html.parser")
 quotes = []
